@@ -17,11 +17,11 @@ import com.example.baseball.domain.Player;
 import com.example.baseball.service.PlayerService;
 
 @Controller
-@RequestMapping("/players") // ①
+@RequestMapping("/players")
 public class PlayerController {
     @Autowired
     private PlayerService playerService;
-
+    
     @GetMapping
     public String index(Model model) { // ②
         List<Player> players = playerService.findAll();
